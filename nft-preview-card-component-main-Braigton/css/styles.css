@@ -1,0 +1,146 @@
+:root {
+    --fuente: 'Outfit', sans-serif;
+    --celeste: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --azulMainbg: hsl(217, 54%, 11%);
+    --azulCardbg: hsl(216, 50%, 16%);
+    --azulLinea: hsl(215, 32%, 27%);
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--azulMainbg);
+    font-family: var(--fuente);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+}
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    box-sizing: inherit;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+}
+.attribution a {
+    color: var(--cyan);
+}
+span, a {
+    color: white;
+    text-decoration: none;
+}
+span:hover, a:hover {
+    color: var(--cyan);
+}
+hr {
+    border: 1px solid var(--azulLinea);
+    width: 90%;
+    margin: 1.5rem 0;
+}
+.contenedor {
+    background-color: var(--azulCardbg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    max-width: 35rem;
+    
+}
+.imagen {
+    width: 90%;
+    margin-top: 2rem; 
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.imagen img{
+    width: 100%;
+    display: block;
+}
+.ojo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 0.4);
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.ojo:hover {
+    opacity: 1;
+}
+.ojo img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.info {
+    color: white;
+    margin: 2rem 2rem;
+    font-size: 2.4rem;
+}
+.info__p {
+    color: var(--celeste);
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+.rows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.4rem;
+}
+.row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 2rem;
+}
+.precio {
+    color: var(--cyan);
+    font-size: 1.9rem;
+}
+.time {
+    color: var(--celeste)
+}
+.line {
+    border-bottom: 1px solid var(--azulLinea);
+    height: 0;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.row-credits {
+    display: flex;
+    width: 90%;
+    padding-bottom: .6rem;
+}
+.credits {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.credits__p {
+    color: var(--celeste);
+}
+.img-credits {
+    width: 3.7rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
